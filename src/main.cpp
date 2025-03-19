@@ -74,7 +74,7 @@ void setup() {
 }
 
 void loop() {
-  if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 15000 || sendDataPrevMillis == 0)) {
+  if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 900000 || sendDataPrevMillis == 0)) { // 15 minut = 900000 ms
     sendDataPrevMillis = millis();
 
     timeClient.update();
